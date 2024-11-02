@@ -55,7 +55,7 @@ header {
     bottom: -2px; /* Ajusta a posição da linha */
     width: 0;
     height: 2px;
-    background-color: white;
+    background-color: #1ED96F;
     transition: width 0.5s ease;
 }
 
@@ -63,15 +63,30 @@ header {
     width: 100%; /* Ajusta a largura da linha */
 }
 
-
 .header-2 > a {
     color: #ffffff;
     text-decoration: none;
     font-size: 16px;
     font-weight: 500;
-    padding-right: 30px;
-    padding-left: 30px;
+    margin-right: 50px;
+    margin-left: 30px;
     text-align: right;
+    position: relative;
+}
+
+.header-2 a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px; /* Ajusta a posição da linha */
+    width: 0;
+    height: 2px;
+    background-color: #1ED96F;
+    transition: width 0.5s ease;
+}
+
+.header-2 a:hover::after {
+    width: 100%; /* Ajusta a largura da linha */
 }
 
 body {
@@ -185,3 +200,75 @@ form {
 }
 
 /* /modal */
+
+/* icons */
+
+i.fas.fa-house {
+    display: block;
+    margin-right: 8px;
+    color: #1ed96f;
+    outline-color: rgb(30, 217, 111);
+    text-align: left;
+    cursor: pointer;
+}
+
+i.fa-solid.fa-bars {
+    display: block;
+    margin-right: 8px;
+    color: rgb(30, 217, 111);
+    outline-color: rgb(30, 217, 111);
+    cursor: pointer;
+}
+
+i.fa-solid.fa-caret-right {
+    display: block;
+    margin-left: 220px;
+    text-align: left;
+    text-transform: uppercase;
+    color: rgb(91, 91, 91);
+    cursor: pointer;
+}
+
+/* end icons */
+
+/* main */
+
+.nav-main {
+    display: block;
+    gap: 20px;
+    width: 430px;
+    text-align: center;
+    border-radius: 8px;
+    background-color: rgb(28, 33, 44);
+    margin: 100px;
+}
+
+.produto {
+    display: inline-flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    border-bottom-color: rgb(37, 44, 56);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    padding: 0px 10px;
+    width: 100%;
+}
+
+li > a {
+    display: inline-flex;
+    color: rgb(255, 255, 255);
+    align-items: center;
+    padding: 24px;
+    background-attachment: scroll;
+    background-clip: border-box;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: left;
+    text-transform: uppercase;
+    text-decoration: none;
+    justify-content: space-around;
+    letter-spacing: 2px;
+}
+/* end main */

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="scr/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="scr/style/style3.css">
+    <title>Loja Minecraft</title>
+</head>
+<body>
+    <header>
+        <ul class="nav">
+            <div class="header-1">
+                <a href="index.html"><i class="fas fa-home"></i> Início</a>
+                <a href="#"><i class="fa-brands fa-discord"></i> Discord</a>
+            </div>
+            
+            <div class="header-2">
+            <button class="open-modal" data-modal="modal-1">
+                <i class="fas fa-sign-in-alt"></i> Login
+            </button>
+
+            <dialog id="modal-1">
+                <form>
+                    <div class="modal-header">
+                        <h1 class="modal-title">
+                            Logue seu nickname!
+                        </h1>
+                        <button class="close-modal" data-modal="modal-1" type="button">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
+                    </div>
+
+                    <div class="modal-body">
+                        <div class="input-group">
+                            <label for="nickname">Nickname</label>
+                            <input type="text" id="nickname" name="nickname" placeholder="Nickname in-game">
+                        </div>
+
+                        <div class="input-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="name@example.com">
+                        </div>
+
+                        <div class="input-group">
+                            <label for="server">Server</label>
+                            <input type="text" id="server" name="server" placeholder="Ex: Rankup">
+                        </div>
+
+                        <button id="submit">
+                            Login to your account
+                        </button>
+                        
+                        <div class="register">
+                            <span>Not register?</span>
+                            <a href="register.html">Click aqui</a>
+                        </div>
+                    </div>
+                </form>
+            </dialog>
+            <a href="checkout.html"><i class="fas fa-shopping-cart"></i> Carrinho</a>
+            </div>
+        </ul>
+</header>
+<main>
+    <div class="checkout-title">Seu carrinho</div>
+    <div class="checkout-body">
+        <section>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Produto</th>
+                        <th>Preço</th>
+                        <th>Quantidade</th>
+                        <th>Total</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="produto">
+                                <img src="https://picsum.photos/100/120" alt="">
+                                <div class="info">
+                                    <div class="name">Nome do produto</div>
+                                    <div class="tag">descrição do produto</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>R$ 120</td>
+                        <td>
+                            <div class="qty">
+                                <button><i class="fa-solid fa-minus"></i></button>
+                                <span>2</span>
+                                <button><i class="fa-solid fa-plus"></i></button>
+                            </div>
+                        </td>
+                        <td>R$ 240</td>
+                        <td>
+                            <button class="remove"><i class="fa-solid fa-x"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="produto">
+                                <img src="https://picsum.photos/100/120" alt="">
+                                <div class="info">
+                                    <div class="name">Nome do produto</div>
+                                    <div class="tag">descrição do produto</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>R$ 120</td>
+                        <td>
+                            <div class="qty">
+                                <button><i class="fa-solid fa-minus"></i></button>
+                                <span>2</span>
+                                <button><i class="fa-solid fa-plus"></i></button>
+                            </div>
+                        </td>
+                        <td>R$ 240</td>
+                        <td>
+                            <button class="remove"><i class="fa-solid fa-x"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="produto">
+                                <img src="https://picsum.photos/100/120" alt="">
+                                <div class="info">
+                                    <div class="name">Nome do produto</div>
+                                    <div class="tag">descrição do produto</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>R$ 120</td>
+                        <td>
+                            <div class="qty">
+                                <button><i class="fa-solid fa-minus"></i></button>
+                                <span>2</span>
+                                <button><i class="fa-solid fa-plus"></i></button>
+                            </div>
+                        </td>
+                        <td>R$ 240</td>
+                        <td>
+                            <button class="remove"><i class="fa-solid fa-x"></i></button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <aside>
+            <div class="box">
+                <div class="title">Resumo da compra</div>
+                <div class="info">
+                    <div><span>Sub-total</span><span>R$ 418</span></div>
+                    <div><span>Frete</span><span>Gratuito</span></div>
+                    <div>
+                        <button id="addCouponButton">Adicionar cupom <i class="fa-solid fa-ticket"></i></button>
+                        <dialog id="couponDialog">
+                            <form method="dialog">
+                                <h1>Adicionar Cupom</h1>
+                                <label for="couponCode">Cupom:</label>
+                                <input type="text" id="couponCode" name="couponCode" placeholder="EX: DESCONTO10" required>  
+                                <br><br>
+                                <button type="submit" id="submit">Aplicar Cupom</button>
+                                <button type="button" id="closeDialog">Cancelar</button>
+                            </form>
+                        </dialog>
+                    </div>
+                    <div><span>Desconto</span><span>R$ 0</span></div>
+                </div>
+                <div class="total">
+                    <span>Total</span><span>R$ 418</span>
+                </div>
+            </div>
+            <button onclick="window.location.href='index.html'">Finalizar compra </button>
+        </aside>
+    </div>
+</main>
+<script src="scr/js/script.js"></script>
+</body>
+</html>
